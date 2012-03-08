@@ -1,0 +1,1 @@
+This is a map/reduce framework for Cassandra.  It greatly simplifies running map/reduce jobs against a Cassandra cluster.   It provides facilities for remotely deploying hadoop jobs and allows you to write map/reduce jobs in ruby.
