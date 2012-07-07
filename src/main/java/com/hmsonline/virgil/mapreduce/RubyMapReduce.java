@@ -74,9 +74,12 @@ public class RubyMapReduce extends Configured implements Tool {
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(ObjectWritable.class);
 
-        ConfigHelper.setPartitioner(job.getConfiguration(), "org.apache.cassandra.dht.RandomPartitioner");
-        ConfigHelper.setInitialAddress(job.getConfiguration(), getConf().get("cassandraHost"));
-        ConfigHelper.setRpcPort(job.getConfiguration(), getConf().get("cassandraPort"));
+        ConfigHelper.setInputPartitioner(job.getConfiguration(), "org.apache.cassandra.dht.RandomPartitioner");
+        ConfigHelper.setInputInitialAddress(job.getConfiguration(), getConf().get("cassandraHost"));
+        ConfigHelper.setInputRpcPort(job.getConfiguration(), getConf().get("cassandraPort"));
+        ConfigHelper.setOutputPartitioner(job.getConfiguration(), "org.apache.cassandra.dht.RandomPartitioner");
+        ConfigHelper.setOutputInitialAddress(job.getConfiguration(), getConf().get("cassandraHost"));
+        ConfigHelper.setOutputRpcPort(job.getConfiguration(), getConf().get("cassandraPort"));
 
         ConfigHelper.setInputColumnFamily(job.getConfiguration(), getConf().get("inputKeyspace"),
                 getConf().get("inputColumnFamily"));
