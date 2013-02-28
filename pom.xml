@@ -5,7 +5,7 @@
 	<name> HMS : Cassandra : MapReduce </name>
 	<url>http://maven.apache.org</url>
 	<groupId>com.hmsonline</groupId>
-	<version>0.15.3-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
