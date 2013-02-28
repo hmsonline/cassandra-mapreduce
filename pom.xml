@@ -64,8 +64,12 @@
 		<dependency>
 			<groupId>org.apache.cassandra</groupId>
 			<artifactId>cassandra-all</artifactId>
-			<version>1.1.2</version>
+			<version>1.2.1</version>
 			<exclusions>
+				<exclusion>
+					<artifactId>snappy-java</artifactId>
+					<groupId>org.xerial.snappy</groupId>
+				</exclusion>
 				<exclusion>
 					<artifactId>guava</artifactId>
 					<groupId>com.google.guava</groupId>
@@ -79,6 +83,11 @@
 					<artifactId>jackson-core-asl</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.xerial.snappy</groupId>
+			<artifactId>snappy-java</artifactId>
+			<version>1.0.5-M3</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
